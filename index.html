@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Azzahra Aini Ma'rifah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styling */
+body {
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+        background: linear-gradient(180deg, #5672c0, #222529); /* Gradasi biru ke hitam agak cerah */
+        color: white;
+        }
+
+
+
+        /* Header Styling */
+header {
+        background-color: #364878;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+footer  {
+        background-color: #343a40; /* Warna gelap untuk footer (bg-dark) */
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3); /* Menambahkan efek drop shadow */
+        }
+
+
+h1,h2   {
+        font-weight: bold;
+            
+        }
+#pendidikan h2::after {
+        content: "";
+        display: block;
+        width: 1000px; /* Panjang garis */
+        height: 4px; /* Ketebalan garis */
+        background-color: #f0ad4e; /* Warna garis */
+        margin: 10px auto 20px; /* Jarak antara judul dan garis */
+        border-radius: 2px; /* Membuat sudut garis membulat */
+}
+        /* Garis Pemanis di Bawah Tulisan Pengalaman Organisasi */
+#pengalaman-organisasi h2::after {
+        content: "";
+        display: block;
+        width: 1000px; /* Panjang garis */
+        height: 4px; /* Ketebalan garis */
+        background-color: #f0ad4e; /* Warna garis */
+        margin: 10px auto 20px; /* Jarak antara judul dan garis */
+        border-radius: 2px; /* Membuat sudut garis membulat */
+}
+#desain-uiux h2::after {
+        content: "";
+        display: block;
+        width: 1000px; /* Panjang garis */
+        height: 4px; /* Ketebalan garis */
+        background-color: #f0ad4e; /* Warna garis */
+        margin: 10px auto 20px; /* Jarak antara judul dan garis */
+        border-radius: 2px; /* Membuat sudut garis membulat */
+}
+#sertifikat h2::after {
+        content: "";
+        display: block;
+        width: 1000px; /* Panjang garis */
+        height: 4px; /* Ketebalan garis */
+        background-color: #f0ad4e; /* Warna garis */
+        margin: 10px auto 20px; /* Jarak antara judul dan garis */
+        border-radius: 2px; /* Membuat sudut garis membulat */
+}
+
+#Kontak h2::after {
+        content: "";
+        display: block;
+        width: 1000px; /* Panjang garis */
+        height: 4px; /* Ketebalan garis */
+        background-color: #f0ad4e; /* Warna garis */
+        margin: 10px auto 20px; /* Jarak antara judul dan garis */
+        border-radius: 2px; /* Membuat sudut garis membulat */
+        }
+
+        /* Link Styling */
+    a {
+        color: #007bff;
+        text-decoration: none;
+        }
+
+    a:hover {
+        text-decoration: underline;
+        }
+
+        /* Image Container Styling */
+.image-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+        }
+
+.image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+            
+        transition: transform 0.3s ease-in-out;
+        }
+
+.image-container:hover {
+        transform: scale(1.1);
+        }
+
+.image-container:hover img {
+        transform: scale(1.1);
+        }
+        /* Modal animasi */
+.modal-dialog {
+        transform: translateY(100px);
+        transition: transform 0.3s ease-in-out;
+        }
+
+        /* Navbar Hover Animation */
+.navbar-brand {
+        transition: transform 0.3s ease; /* Transisi untuk efek pop-up */
+        }
+.navbar-brand:hover {
+        color: #f0ad4e;
+        text-decoration: none;
+        transform: scale(1.1); /* Meningkatkan ukuran brand */
+        }
+.navbar {
+        background-color: #364878; /* Warna gelap untuk navbar (bg-dark) */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Efek drop shadow */
+        }
+.nav-link {
+        color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk efek pop-up */
+        }
+.nav-link:hover {
+        transform: scale(1.1); /* Meningkatkan ukuran tombol */
+        }
+
+
+.navbar-nav :hover {
+        color: #f0ad4e;
+        text-decoration: none;
+        }
+
+        /* Animate Text */
+.animate-text {
+        animation: fadeInUp 2s ease;
+        }
+
+.animate-subtext {
+        animation: fadeInUp 3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll to Top Button */
+#scrollTopBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        font-size: 18px; /* Increase font size */
+        background-color: #364878; /* Dark blue background */
+        color: white; /* White text */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        }
+
+#scrollTopBtn:hover {
+        background-color: #f0ad4e; /* Add a dark-grey background on hover */
+        transform: scale(1.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+.landscape {
+        width: 100%;
+        height: auto;
+        max-height: 300px; /* atau sesuaikan dengan ukuran yang diinginkan */
+        object-fit: cover;
+}
+.hover-animation {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hover-animation:hover {
+    transform: scale(1.3); /* Membesarkan ikon */
+    color: red; /* Mengubah warna ikon menjadi merah */
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fas fa-laptop-code"></i> Portofolio Azzahra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang"><i class="fas fa-home"></i> Tentang Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pendidikan"><i class="fas fa-graduation-cap"></i> Pendidikan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pengalaman-organisasi"><i class="fas fa-users"></i> Pengalaman Organisasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#desain-uiux"><i class="fas fa-paint-brush"></i> Project Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sertifikat"><i class="fas fa-certificate"></i> Sertifikat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Kontak"><i class="fas fa-phone"></i> Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="background-color text-white text-center p-5" id="portofolio">
+        <h1 class="animate-text">Azzahra Aini Ma'rifah</h1>
+        <p class="animate-subtext">Mahasiswa Jurusan Teknik Informatika | UI/UX Designer</p>
+    </header>
+
+    <!-- Photo Section with Container -->
+    <section class="container text-center mt-5">
+        <div class="image-container" data-bs-toggle="modal" data-bs-target="#photoModal" id="tentang">
+            <img src="profile.jpg" alt="Foto Azzahra Aini Ma'rifah" class="img-fluid square">
+        </div>
+        <h3 class="mt-3"><strong>Azzahra 'Aini Ma'rifah</strong></h3>
+        <p class="mt-3">Mahasiswa semester 5 Jurusan Teknik Informatika di
+            Universitas Negeri Surabaya dengan ketertarikan pada
+            bidang desain dan teknologi informasi. Memiliki
+            kemampuan kepemimpinan yang baik dan dapat
+            bekerja efektif dalam tim.
+            Selama berkuliah, saya telah terlibat dalam berbagai
+            proyek, termasuk pengembangan aplikasi, pembuatan
+            website yang fungsional, desain UI/UX,
+            serta pengelolaan basis data secara efisien.</p>
+    </section>
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">Foto profil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="profile.jpg" alt="Foto Close-Up" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <section class="container text-center mt-5" id="pendidikan">
+        <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
+        <p><strong>Universitas Negeri Surabaya</strong> (Agustus 2022 - Sekarang)</p>
+        <ul>
+            <p>• S1 Pendidikan Teknologi Informasi</p>
+            <p> <strong>Mata Kuliah Relevan:</strong></p>
+             <p>Pemrograman Mobile, Pemrograman Visual,
+                Pemrograman Berorientasi Objek, Sistem Digital,
+                Sistem Operasi, Multimedia, Analisis dan
+                Perancangan Sistem, Interaksi Manusia dan
+                Komputer, Arsitektur dan Organisasi Komputer</p>
+        </ul>
+    </section>
+
+    <!-- Organizational Experience Section with Container -->
+    <section class="container text-center mt-5" id="pengalaman-organisasi">
+        <h2><i class="fas fa-users"></i> Pengalaman Organisasi</h2>
+    
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <p><strong>• Panitia PKKMB Fakultas Teknik</strong> (Agustus 2024)</p>
+                <p>Bertanggung jawab sebagai Sie Pendamping di PKKMB Fakultas Teknik Universitas Negeri Surabaya tahun 2024, yang bertugas mendampingi sekitar 40 mahasiswa baru dalam berorientasi di lingkungan kampus, memastikan kelancaran kegiatan pengenalan kampus dengan memberikan arahan dan dukungan selama rangkaian acara.</p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#organizationPhotoModal">
+                    <img src="organisasi.jpg" alt="Pengalaman Organisasi" class="img-fluid landscape">
+                </div>
+                <div class="modal fade" id="organizationPhotoModal" tabindex="-1" aria-labelledby="organizationPhotoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="organizationPhotoModalLabel">Foto Organisasi</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="organisasi.jpg" alt="Foto Organisasi" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <p><strong>• Ikatan Mahasiswa Muhammadiyah Universitas Negeri Surabaya</strong> (Oktober 2023-Sekarang)</p>
+                <p>Bertanggung jawab dalam mengelola dan mengembangkan strategi komunikasi dan media organisasi. Berkontribusi dalam pembuatan konten kreatif untuk berbagai platform media, serta memastikan pesan organisasi tersampaikan dengan efektif kepada seluruh anggota dan masyarakat luas.</p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#organizationPhotoModal1">
+                    <img src="foto imm.jpg" alt="Pengalaman Organisasi" class="img-fluid landscape">
+                </div>
+                <div class="modal fade" id="organizationPhotoModal1" tabindex="-1" aria-labelledby="organizationPhotoModal1Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="organizationPhotoModal1Label">Foto Organisasi</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="foto imm.jpg" alt="Foto Organisasi" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Project experience Section with Container -->
+    <section class="container text-center mt-5" id="desain-uiux">
+        <h2><i class="fas fa-paint-brush"></i> Project Experience</h2>
+        
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <p>Aplikasi Website: <a href="https://github.com/Azzahraaini12/Website-Absen-Siswa-main" target="_blank">Link Aplikasi</a></p>
+                <p>Aplikasi ini dibuat dengan bahasa utama CSS, PHP, JavaScript dan HTML. Website ini di rancang untuk memudahkan absensi pada siswa dan memastikan data absensi siswa dapat tersimpan dan terorganisir dengan baik.</p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#portfolioPhotoModal1">
+                    <img src="poster1.jpeg" alt="Contoh Aplikasi Website" class="img-fluid landscape">
+                </div>
+                <div class="modal fade" id="portfolioPhotoModal1" tabindex="-1" aria-labelledby="portfolioPhotoModal1Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="portfolioPhotoModal1Label">Foto Portofolio</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="poster1.jpeg" alt="Foto Portofolio" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <p>Portofolio Data Analyst: <a href="https://drive.google.com/drive/folders/11_VE0-zSA1be4SYG38cdBlkYtnijvTA2?hl=id" target="_blank">Link Google Drive</a></p>
+                <p>Portofolio ini menampilkan sejumlah proyek analisis data yang telah saya kerjakan. Penggunaan alat seperti Python, SQL, Excel, dan ConQuest GUI menjadi bagian dari proses analitik untuk menghasilkan laporan yang komprehensif.</p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#portfolioPhotoModal2">
+                    <img src="desain2.jpg" alt="Contoh Desain UI/UX" class="img-fluid square">
+                </div>
+                <div class="modal fade" id="portfolioPhotoModal2" tabindex="-1" aria-labelledby="portfolioPhotoModal2Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="portfolioPhotoModal2Label">Foto Portofolio</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="desain2.jpg" alt="Foto Portofolio" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+            <p>Aplikasi Berbasis Website: <a href=https://github.com/Azzahraaini12/Website-Absensi-Santri>Link Aplikasi</a></p>
+         <p>Aplikasi ini dibuat dengan bahasa utama CSS, PHP, JavaScript, dan HTML. Website ini dirancang untuk memudahkan absensi pada santri dan memastikan data absensi santri dapat tersimpan dan terorganisir dengan baik. Aplikasi ini juga menggunakan MySQL sebagai basis data untuk menyimpan informasi absensi, dan dijalankan di localhost menggunakan XAMPP untuk memudahkan pengembangan dan pengujian secara lokal.</p>
+            <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#portfolioPhotoModal3">
+            <img src="halaman1absensantri.jpg" alt="Pembuatan Aplikasi Website" class="img-fluid square">
+        </div>
+        <div class="modal fade" id="portfolioPhotoModal3" tabindex="-1" aria-labelledby="portfolioPhotoModal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="portfolioPhotoModal3Label">halaman1absensantri</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="halaman1absensantri.jpg" alt="halaman1absensantri" class="img-fluid">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <p>Desain UI/UX: <a href=https://github.com/Azzahraaini12/Website-Absen-Siswa-main>Link Figma</a></p>
+        <p>Desain ini dirancang untuk memberikan kemudahan bagi pengguna dalam mengelola perjalanan mereka. Pada aplikasi Travel Notes, saya membuat antarmuka yang bersih dan intuitif dengan fokus pada fitur-fitur penting. Desain keseluruhan aplikasi ini dirancang agar pengguna merasa nyaman dalam mengakses informasi penting dengan tampilan yang sederhana namun fungsional.</p>
+        <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#portfolioPhotoModal4">
+            <img src="FIGMAUIUX.jpg" alt="UI UX" class="img-fluid square">
+        </div>
+        <div class="modal fade" id="portfolioPhotoModal4" tabindex="-1" aria-labelledby="portfolioPhotoModal4Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="portfolioPhotoModal4Label">Desain UI UX</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="FIGMAUIUX.jpg" alt="UI UX" class="img-fluid">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Certificate Section with Container -->
+    <section class="container text-center mt-5" id="sertifikat">
+        <h2><i class="fas fa-certificate"></i> Sertifikat</h2>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <p><strong>• Successful Career Planning for IT/Computer - SmartPath</strong></p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#certificatePhotoModal1">
+                    <img src="sertifikat1.png" alt="Sertifikat AWS" class="img-fluid landscape">
+                </div>
+                <div class="modal fade" id="certificatePhotoModal1" tabindex="-1" aria-labelledby="certificatePhotoModal1Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="certificatePhotoModal1Label">Foto Sertifikat</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="sertifikat1.png" alt="Foto Sertifikat" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-4">
+                <p><strong>• AWS Cloud Essentials Knowledge Badge - Amazon Web Services</strong></p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#certificatePhotoModal2">
+                    <img src="sertifikat2.jpg" alt="Sertifikat AWS" class="img-fluid landscape">
+                </div>
+                <div class="modal fade" id="certificatePhotoModal2" tabindex="-1" aria-labelledby="certificatePhotoModal2Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="certificatePhotoModal2Label">Foto Sertifikat</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="sertifikat2.jpg" alt="Foto Sertifikat" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <p><strong>• LKMM Pra-TD - 11-12 Maret 2023</strong></p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#certificatePhotoModal3">
+                    <img src="sertifikat3.jpg" alt="Sertifikat AWS" class="img-fluid landscape">
+                </div>
+                <div class="modal fade" id="certificatePhotoModal3" tabindex="-1" aria-labelledby="certificatePhotoModal3Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="certificatePhotoModal3Label">Foto Sertifikat</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="sertifikat3.jpg" alt="Foto Sertifikat" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-4">
+                <p><strong>• Panitia PKKMB Fakultas Teknik Universitas Negeri Surabaya 2024</strong></p>
+                <div class="image-container landscape" data-bs-toggle="modal" data-bs-target="#certificatePhotoModal4">
+                    <img src="sertifikat4.jpg" alt="Sertifikat AWS" class="img-fluid landscape">
+                </div>
+                <div class="modal fade" id="certificatePhotoModal4" tabindex="-1" aria-labelledby="certificatePhotoModal4Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="certificatePhotoModal4Label">Foto Sertifikat</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="sertifikat4.jpg" alt="Foto Sertifikat" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section with Icons -->
+    <section class="container text-center mt-5" id="Kontak">
+        <h2>Kontak</h2>
+        <p>Hubungi saya.</p>
+        <p><i class="fas fa-phone"></i> Telepon: <a href="https://wa.me/089524246461"> 089524246461</a></p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:azzahraaini.22008@mhs.unesa.ac.id">azzahraaini.22008@mhs.unesa.ac.id</a></p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/azzahra-aini-ma-rifah/" target="_blank">linkedin.com/in/azzahra-aini-ma-rifah</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+        <p>Terimakasih telah mengunjungi portofolio saya.
+            <a href="https://www.instagram.com/azzahraainii?igsh=ZDN1a3h3NXQxN3J6" target="_blank" class="hover-animation" style="text-decoration:none; color:inherit;">
+                <i class="fas fa-heart"></i>
+            </a>
+        </p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Scroll to Top Button -->
+    <script>
+        // Get the button
+        var scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+       
+    // Mengatur offset scroll ketika link di navbar ditekan
+    document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetID = this.getAttribute('href');
+            const targetElement = document.querySelector(targetID);
+
+            // Mengatur jarak offset sesuai dengan tinggi header/navbar
+            const offsetPosition = targetElement.offsetTop - 70; // Sesuaikan angka ini dengan tinggi header
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    </script>
+</body>
+</html>
